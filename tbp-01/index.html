@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <link rel="stylesheet" href="./css/style.css">
+ <title>Cores</title>
+</head>
+
+<body>
+ <div class="container">
+  <h2>Trabalho Prático 1 - IGTI</h2>
+  <div class="content">
+   <form>
+    <div class="color-red">
+     <label id="lblRed">Vermelho (R):</label>
+     <input min="0" max="255" type="range" id="red">
+     <input type="text" id="inputRed" value="0" disabled />
+    </div>
+    <div class="color-green">
+     <label id="lblRBlue">Verde (G):</label>
+     <input min="0" max="255" type="range" id="green">
+     <input type="text" id="inputGreen" value="0" disabled />
+    </div>
+    <div class="color-blue">
+     <label id="lblBlue">Azul (B):</label>
+     <input min="0" max="255" type="range" id="blue">
+     <input type="text" id="inputBlue" value="0" disabled />
+    </div>
+   </form>
+   <br />
+   <div id="resultColor">
+
+   </div>
+  </div>
+
+
+ </div>
+
+ <script defer src="./js/script.js"></script>
+</body>
+
+</html>
