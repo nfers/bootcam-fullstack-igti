@@ -10,14 +10,12 @@ accountRouter.post('/', async (req, res) => {
   let account = req.body
   const data = JSON.parse(await readFile('account.json'));
 
-  account.id = data.nextId;
-
+  account = { id: data.nextId++, ...account }
   data.nextId++;
-
   data.accounts.push(account)
 
   await writeFile('account.json', JSON.stringify(data))
-  console.log(data)
+
   res.status(200).send({ result: true, data: [{ id: account.id, name: account.name }] })
  } catch (error) {
   res.status(404).send({ error: error.message })
